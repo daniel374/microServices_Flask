@@ -8,10 +8,11 @@ resultResta = 5 - 4;
 
 
 @app.route('/', methods=['GET'])
-def get_nodos():
+def get_resta():
     return jsonify(resultResta)
 
 
 #revisa y ejecuta la aplicacion
+#Se inicia el servicio en otro puerto
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+    app.run(debug=True, port=82)

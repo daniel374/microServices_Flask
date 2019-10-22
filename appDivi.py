@@ -4,15 +4,15 @@ from flask import Flask, jsonify, abort, make_response, request
 
 app = Flask(__name__)
 
-resultRuma = 5 + 4;
+resultDivi = 5 / 2;
 
 
 @app.route('/', methods=['GET'])
-def get_suma():
-    return jsonify(resultRuma)
+def get_divi():
+    return jsonify(resultDivi)
 
 
 #revisa y ejecuta la aplicacion
 #Se inicia el servicio en otro puerto
 if __name__ == '__main__':
-    app.run(debug=True, port=83)
+    app.run(debug=True, port=5000)
