@@ -1,0 +1,47 @@
+
+<div>
+  <table style="width: 200px">
+    <tbody>
+      <tr style="height: 30px; text-align: right;">
+        <td>{{ subText }}<hr></td>
+
+      </tr>
+      <tr style="height:30px;  text-align: right;">
+        <td>{{ mainText }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <table style="width: 200px">
+    <tbody class="keypad" style="cursor: pointer;">
+      <tr>
+        <td   colspan="3" (click)="allClear()">AC</td>
+        <td   (click)="pressKey('/')">/</td>
+      </tr>
+      <tr>
+        <td  (click)="pressKey('7')">7</td>
+        <td  (click)="pressKey('8')">8</td>
+        <td  (click)="pressKey('9')">9</td>
+        <td  (click)="pressKey('x')">x</td>
+      </tr>
+      <tr>
+        <td (click)="pressKey('4')">4</td>
+        <td (click)="pressKey('5')">5</td>
+        <td  (click)="pressKey('6')">6</td>
+        <td (click)="pressKey('-')">-</td>
+      </tr>
+      <tr>
+        <td  (click)="pressKey('1')">1</td>
+        <td  (click)="pressKey('2')">2</td>
+        <td  (click)="pressKey('3')">3</td>
+        <td  (click)="pressKey('+')">+</td>
+      </tr>
+      <tr>
+        <td colspan="2" (click)="pressKey('0')">0</td>
+        
+        <td (click)="pressKey('.')">.</td>
+        <td (click)="getAnswer()">=</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
